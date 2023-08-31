@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
-import { Provider } from "./_trpc/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +22,8 @@ export default function RootLayout({
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Provider>
-            <Header />
-            {children}
-          </Provider>
+          <Header />
+          {children}
         </ThemeProvider>
       </body>
     </html>
