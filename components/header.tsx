@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import SignInButton from "./signin-button";
-import { ToggleMode } from "./toggle-mode";
-import { getCurrentUser } from "@/server/auth";
 import NavbarMenu from "./navbar-menu";
+import { ToggleMode } from "./toggle-mode";
+import { getCurrentUser } from "@/lib/auth";
 
 export async function Header() {
   const user = await getCurrentUser();
