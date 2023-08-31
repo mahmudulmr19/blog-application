@@ -14,7 +14,7 @@ model User {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt DateTime @default(now())
   name      String?
-  username  String   @unique
+  username  String?  @unique
   avatar    String?
   email     String   @unique
   role      Role     @default(USER)
