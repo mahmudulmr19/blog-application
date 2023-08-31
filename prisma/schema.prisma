@@ -15,6 +15,7 @@ model User {
   createdAt DateTime @default(now())
   name      String?
   username  String   @unique
+  avatar    String?
   email     String   @unique
   role      Role     @default(USER)
   post      Post[]
