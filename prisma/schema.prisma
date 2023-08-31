@@ -41,9 +41,10 @@ model User {
   createdAt     DateTime  @default(now())
   name          String?
   username      String?   @unique
-  avatar        String?
+  image         String?
   email         String    @unique
   emailVerified DateTime?
+  role          Role      @default(USER)
   post          Post[]
   accounts      Account[]
   sessions      Session[]

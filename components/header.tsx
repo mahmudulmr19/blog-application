@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import SignInButton from "./signin-button";
 import { ToggleMode } from "./toggle-mode";
-import { Button } from "./ui/button";
 
 export function Header() {
   return (
@@ -12,7 +12,7 @@ export function Header() {
         <nav className="flex items-center text-sm space-x-6 font-medium">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Button className="rounded-full">Sign in</Button>
+          <SignInButton />
           <ToggleMode />
         </nav>
       </div>
